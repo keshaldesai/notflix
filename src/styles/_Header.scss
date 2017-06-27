@@ -1,16 +1,32 @@
 .header {
-  background-color: black;
-  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
   height: 50px;
-  padding: 16px 16px;
+  padding: 16px 40px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.header-left {
+.header-left, .header-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.header-right {
+.header-link {
+  padding: 8px 24px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.browse {
+  color: red;
+  position: relative;
+}
+
+.browse-options {
+  transition: opacity .15s ease-in-out;
+  position: absolute;
 }
