@@ -9,15 +9,15 @@ class Header extends Component {
     return (
       <div className="header">
         <div className="header-left">
-          <img src={logo} height="30" alt="logo" />
+          <img src={logo} height="30" alt="logo" className="logo" />
           <Browse />
           <Kids />
           <DVD />
         </div>
         <div className="header-right">
-          <span> Search</span>
-          <span> Notifications</span>
-          <span> User</span>
+          <span className="header-link"> Search</span>
+          <span className="header-link"> Notifications</span>
+          <span className="header-link"> User</span>
         </div>
       </div>
     );

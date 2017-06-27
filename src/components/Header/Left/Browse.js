@@ -10,19 +10,24 @@ class Browse extends Component {
   }
 
   render() {
+    const { showMenu } = this.state;
     return (
-      <span className="header-link browse">
-        <div
-          onMouseOver={() => {
-            this.setState({ showMenu: true });
+      <span
+        className="header-link browse"
+        onMouseOver={() => {
+          this.setState({ showMenu: true });
+        }}
+        onClick={() => {
+          this.setState({ showMenu: !showMenu });
+        }}
+      >
+        Browse <i className="fa fa-caret-down" aria-hidden="true" />
+        <BrowseOptions
+          showMenu={showMenu}
+          leaveHandler={() => {
+            this.setState({ showMenu: !showMenu });
           }}
-          onMouseLeave={() => {
-            this.setState({ showMenu: false });
-          }}
-        >
-          Browse <i className="fa fa-caret-down" aria-hidden="true" />
-          <BrowseOptions showMenu={this.state.showMenu} />
-        </div>
+        />
       </span>
     );
   }

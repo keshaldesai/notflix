@@ -1,20 +1,21 @@
 .header {
   background-color: rgba(0, 0, 0, 0.5);
-  height: 50px;
-  padding: 16px 40px;
+  height: 65px;
+  width: 100%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  font-family: 'Montserrat', sans-serif; }
+  font-family: 'Montserrat', sans-serif;
+  position: fixed; }
 
 .header-left, .header-right {
   display: flex;
   justify-content: center;
   align-items: center; }
 
-.header-link {
-  padding: 8px 24px;
+.logo, .header-link {
+  padding: 16px 24px;
   cursor: pointer;
   user-select: none; }
 
@@ -22,9 +23,49 @@
   color: red;
   position: relative; }
 
+.options-container {
+  color: white;
+  position: fixed;
+  top: 45px;
+  transition: visibility 0s, opacity 0.5s linear;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center; }
+
+.fa-caret-up {
+  padding: 0;
+  margin: 0; }
+
 .browse-options {
-  transition: opacity .15s ease-in-out;
-  position: absolute; }
+  background-color: black;
+  font-size: .8em;
+  display: flex;
+  flex-flow: row nowrap;
+  border-top: white;
+  border-width: 1px 0px 0px 0px;
+  border-style: solid;
+  padding: 16px 8px 16px 8px;
+  cursor: default; }
+
+.browse-options ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+.browse-options ul li {
+  padding: 0 8px 8px 8px; }
+
+.options-links {
+  border-right: grey;
+  border-width: 0px 1px 0px 0px;
+  border-style: solid;
+  font-weight: bolder; }
+
+.options-item {
+  cursor: pointer; }
+
+.options-item:hover {
+  text-decoration: underline; }
 
 body {
   background-color: #141414;
