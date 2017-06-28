@@ -1,6 +1,5 @@
 .header {
   background-color: rgba(0, 0, 0, 0.5);
-  height: 65px;
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
@@ -17,7 +16,13 @@
 }
 
 .logo, .header-link {
-  padding: 16px 24px;
+  padding: 24px 24px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.logo {
+  padding: 0px 24px;
   cursor: pointer;
   user-select: none;
 }
@@ -30,7 +35,7 @@
 .options-container {
   color: white;
   position: fixed;
-  top: 45px;
+  top: 50px;
   transition: visibility 0s, opacity 0.5s linear;
   display: flex;
   flex-flow: column nowrap;

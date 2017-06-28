@@ -20,14 +20,12 @@ class Browse extends Component {
         onClick={() => {
           this.setState({ showMenu: !showMenu });
         }}
+        onMouseLeave={() => {
+          this.setState({ showMenu: false });
+        }}
       >
         Browse <i className="fa fa-caret-down" aria-hidden="true" />
-        <BrowseOptions
-          showMenu={showMenu}
-          leaveHandler={() => {
-            this.setState({ showMenu: !showMenu });
-          }}
-        />
+        <BrowseOptions showMenu={showMenu} />
       </span>
     );
   }

@@ -39,12 +39,8 @@ const BrowseOptions = ({ showMenu, leaveHandler }) => {
     opacity: showMenu ? 1 : 0
   };
   return (
-    <div
-      className="options-container"
-      style={style}
-      onMouseLeave={leaveHandler}
-    >
-      <i className="fa fa-caret-up" aria-hidden="true" />
+    <div className="options-container" style={style}>
+      <span><i className="fa fa-caret-up" aria-hidden="true" /></span>
       <div className="browse-options">
         <ul className="options-links">
           {links.map(link => {
