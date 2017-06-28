@@ -6,7 +6,8 @@
   justify-content: space-between;
   align-items: center;
   font-family: 'Montserrat', sans-serif;
-  position: fixed; }
+  position: fixed;
+  top: 0px; }
   .header .header-left, .header .header-right {
     display: flex;
     justify-content: center;
@@ -98,6 +99,12 @@
 
 .other-user-icon {
   padding-right: 8px; }
+
+.splash {
+  margin-top: 80px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; }
 
 body {
   background-color: #141414;
