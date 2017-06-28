@@ -11,6 +11,10 @@ class Browse extends Component {
 
   render() {
     const { showMenu } = this.state;
+    const style = {
+      visibility: showMenu ? "" : "hidden",
+      opacity: showMenu ? 1 : 0
+    };
     return (
       <span
         className="header-link browse"
@@ -25,7 +29,11 @@ class Browse extends Component {
         }}
       >
         Browse <i className="fa fa-caret-down" aria-hidden="true" />
-        <BrowseOptions showMenu={showMenu} />
+        <div className="options-container" style={style}>
+          <i className="fa fa-caret-up" aria-hidden="true" />
+          <BrowseOptions />
+        </div>
+
       </span>
     );
   }
