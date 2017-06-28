@@ -64,8 +64,9 @@
       text-decoration: underline; }
 
 .user-options {
+  width: 140px;
   position: relative;
-  right: 38px;
+  right: 54px;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: normal; }
@@ -78,21 +79,19 @@
 .user {
   display: flex;
   align-items: center; }
-  .user .user-icon {
-    padding: 0px 8px; }
-  .user .fa-caret-down {
+  .user .user-icon, .user .fa-caret-down {
     padding: 0px 8px; }
 
 .user {
   position: relative; }
 
-.other-user {
-  display: flex;
-  align-items: center; }
-
 .other-user, .user-link {
   padding-bottom: 8px;
   cursor: pointer; }
+
+.other-user {
+  display: flex;
+  align-items: center; }
 
 .user-link:hover {
   text-decoration: underline; }
