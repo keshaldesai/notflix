@@ -1,13 +1,16 @@
 .header {
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
+  position: fixed;
+  top: 0px;
+}
+
+.header-container {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  font-family: 'Montserrat', sans-serif;
-  position: fixed;
-  top: 0px;
+  padding: 0px 40px;
   .header-left, .header-right {
     display: flex;
     justify-content: center;
@@ -16,13 +19,13 @@
 }
 
 .header-link {
-  padding: 24px 24px;
+  font-family: 'Montserrat', sans-serif;
+  padding: 16px 0px 16px 32px;
   cursor: pointer;
   user-select: none;
 }
 
 .logo {
-  padding: 0px 24px;
   cursor: pointer;
   user-select: none;
 }
@@ -35,7 +38,7 @@
 .browse-container, .user-container {
   color: white;
   position: fixed;
-  top: 60px;
+  top: 45px;
   transition: visibility 0s, opacity 0.5s linear;
   .fa-caret-up {
     position: relative;
@@ -119,7 +122,7 @@
   align-items: center;
 }
 
-.user-link:hover {
+.other-user:hover, .user-link:hover {
   text-decoration: underline;
 }
 

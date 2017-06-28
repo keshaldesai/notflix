@@ -1,12 +1,10 @@
 .splash {
-  margin-top: 80px;
-  padding-top: 40px;
-  padding: 40px 0px 40px 32px;
+  padding: 96px 0px 96px 32px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   display: grid;
-  grid-template-columns: 35% auto;
+  grid-template-columns: 32% auto;
 }
 
 .splash-title {

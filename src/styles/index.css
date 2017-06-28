@@ -1,25 +1,27 @@
 .header {
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
+  position: fixed;
+  top: 0px; }
+
+.header-container {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  font-family: 'Montserrat', sans-serif;
-  position: fixed;
-  top: 0px; }
-  .header .header-left, .header .header-right {
+  padding: 0px 40px; }
+  .header-container .header-left, .header-container .header-right {
     display: flex;
     justify-content: center;
     align-items: center; }
 
 .header-link {
-  padding: 24px 24px;
+  font-family: 'Montserrat', sans-serif;
+  padding: 16px 0px 16px 32px;
   cursor: pointer;
   user-select: none; }
 
 .logo {
-  padding: 0px 24px;
   cursor: pointer;
   user-select: none; }
 
@@ -30,7 +32,7 @@
 .browse-container, .user-container {
   color: white;
   position: fixed;
-  top: 60px;
+  top: 45px;
   transition: visibility 0s, opacity 0.5s linear; }
   .browse-container .fa-caret-up, .user-container .fa-caret-up {
     position: relative;
@@ -94,21 +96,19 @@
   display: flex;
   align-items: center; }
 
-.user-link:hover {
+.other-user:hover, .user-link:hover {
   text-decoration: underline; }
 
 .other-user-icon {
   padding-right: 8px; }
 
 .splash {
-  margin-top: 80px;
-  padding-top: 40px;
-  padding: 40px 0px 40px 32px;
+  padding: 96px 0px 96px 32px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   display: grid;
-  grid-template-columns: 35% auto; }
+  grid-template-columns: 32% auto; }
 
 .splash-title {
   padding: 16px 0px;
@@ -145,4 +145,5 @@ body {
   background-color: #141414;
   color: white;
   margin: 0;
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px; }

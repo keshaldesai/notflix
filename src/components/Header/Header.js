@@ -11,16 +11,18 @@ class Header extends Component {
   render() {
     return (
       <div className="header">
-        <div className="header-left">
-          <img src={logo} height="30" alt="logo" className="logo" />
-          <Browse />
-          <Kids />
-          <DVD />
-        </div>
-        <div className="header-right">
-          <Search />
-          <Notifications />
-          <User />
+        <div className="header-container">
+          <div className="header-left">
+            <img src={logo} height="30" alt="logo" className="logo" />
+            <Browse />
+            <Kids />
+            <DVD />
+          </div>
+          <div className="header-right">
+            <Search />
+            <Notifications />
+            <User />
+          </div>
         </div>
       </div>
     );
