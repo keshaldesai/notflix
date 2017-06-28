@@ -13,3 +13,35 @@
   padding: 16px 0px;
   width: 100%;
 }
+
+.splash-buttons {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.button {
+  margin-top: 16px;
+  padding: 4px 16px;
+  font-size: .7em;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.play-button {
+  background-color: #E50914;
+  margin-right: 8px;
+}
+.play-button:hover {
+  background-color: lighten(#E50914, 5%);
+}
+
+.list-button {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #343434;
+}
+
+.list-button:hover {
+  background-color: lighten(rgba(0, 0, 0, 0.5), 10%);
+}
