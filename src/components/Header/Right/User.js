@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import BrowseOptions from "./BrowseOptions";
+import UserDropdown from "./UserDropdown";
 
-class Browse extends Component {
+class User extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -17,7 +17,7 @@ class Browse extends Component {
     };
     return (
       <span
-        className="header-link browse"
+        className="header-link user"
         onMouseOver={() => {
           this.setState({ showMenu: true });
         }}
@@ -28,15 +28,19 @@ class Browse extends Component {
           this.setState({ showMenu: false });
         }}
       >
-        Browse <i className="fa fa-caret-down" aria-hidden="true" />
-        <div className="browse-container" style={style}>
+        <img
+          src="https://secure.netflix.com/ffe/profiles/avatars_v2/32x32/PICON_027.png"
+          alt="icon"
+          className="user-icon"
+        />
+        User <i className="fa fa-caret-down" aria-hidden="true" />
+        <div className="user-container" style={style}>
           <i className="fa fa-caret-up" aria-hidden="true" />
-          <BrowseOptions />
+          <UserDropdown />
         </div>
-
       </span>
     );
   }
 }
 
-export default Browse;
+export default User;

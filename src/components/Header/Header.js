@@ -3,6 +3,9 @@ import logo from "../../images/logo.svg";
 import Browse from "./Left/Browse";
 import Kids from "./Left/Kids";
 import DVD from "./Left/DVD";
+import Search from "./Right/Search";
+import Notifications from "./Right/Notifications";
+import User from "./Right/User";
 
 class Header extends Component {
   render() {
@@ -15,9 +18,9 @@ class Header extends Component {
           <DVD />
         </div>
         <div className="header-right">
-          <span className="header-link"> Search</span>
-          <span className="header-link"> Notifications</span>
-          <span className="header-link"> User</span>
+          <Search />
+          <Notifications />
+          <User />
         </div>
       </div>
     );
