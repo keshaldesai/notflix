@@ -1,3 +1,28 @@
 .movies {
   height: 1000px;
 }
+
+.movie-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+
+.movie-posters {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  height: 384px;
+}
+
+.single-movie {
+  margin: 0 4px;
+  transition: width 1s;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

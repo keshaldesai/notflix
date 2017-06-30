@@ -8,19 +8,10 @@ class Popular extends Component {
     this.props.getPopular();
   }
 
-  renderGroup() {
-    const { movies } = this.props;
-    if (movies.length === 0) {
-      return <div />;
-    } else {
-      return <MovieGroup movies={movies} />;
-    }
-  }
-
   render() {
     return (
       <div>
-        {this.renderGroup()}
+        <MovieGroup movies={this.props.movies} title="Popular" />
       </div>
     );
   }
@@ -28,7 +19,7 @@ class Popular extends Component {
 
 function mapStateToProps(state) {
   return {
-    movies: this.state.popular
+    movies: state.movies.popular
   };
 }
 
