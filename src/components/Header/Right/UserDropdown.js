@@ -19,7 +19,7 @@ const UserDropdown = () => {
         />
         Kids
       </div>
-      <div className="user-link">Manage Profiles</div>
+      <div className="user-link user-manage">Manage Profiles</div>
       <div className="user-link">Account</div>
       <div className="user-link">Help Center</div>
       <div className="user-link">Sign out of Netflix</div>

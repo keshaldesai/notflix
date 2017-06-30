@@ -1,10 +1,20 @@
 .splash {
-  padding: 96px 0px 96px 32px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+.splash-overlay {
+  padding: 96px 0px 96px 32px;
+  background: linear-gradient(
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1)
+  );
   display: grid;
-  grid-template-columns: 32% auto;
+  grid-template-columns: 35% auto;
 }
 
 .splash-title {
@@ -28,11 +38,12 @@
 }
 
 .play-button {
-  background-color: #E50914;
+  background-color: #e50914;
   margin-right: 8px;
 }
+
 .play-button:hover {
-  background-color: lighten(#E50914, 5%);
+  background-color: lighten(#e50914, 5%);
 }
 
 .list-button {
