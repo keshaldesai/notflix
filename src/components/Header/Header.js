@@ -10,12 +10,7 @@ import User from "./Right/User";
 class Header extends Component {
   render() {
     return (
-      <div
-        className="header"
-        onScroll={e => {
-          console.log(e);
-        }}
-      >
+      <div className="header">
         <div className="header-container">
           <div className="header-left">
             <img src={logo} height="30" alt="logo" className="logo" />
