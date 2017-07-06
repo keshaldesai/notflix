@@ -7,7 +7,9 @@ function MovieGroup({ movies, title }) {
   }
   return (
     <div className="movie-group">
-      {title}
+      <div className="movie-listname">
+        {title}
+      </div>
       <div className="movie-posters">
         {movies.map(movie => {
           return <SingleMovie movie={movie} key={movie.id} />;

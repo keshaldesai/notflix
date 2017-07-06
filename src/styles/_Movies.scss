@@ -1,24 +1,18 @@
-.movies {
-  height: 1000px;
-}
-
 .movie-group {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column nowrap;
+  flex-direction: row;
+}
+.movie-listname {
+  position: absolute;
 }
 
 .movie-posters {
   display: flex;
-  flex-flow: row nowrap;
   align-items: center;
-  justify-content: center;
-  align-content: center;
   height: 384px;
 }
 
-.single-movie {
+.movie-single {
   margin: 0 4px;
   transition: width 1s;
   img {

@@ -2,7 +2,8 @@
   background-color: rgba(0, 0, 0, 0.85);
   width: 100%;
   position: fixed;
-  top: 0px; }
+  top: 0px;
+  z-index: 100; }
 
 .header-container {
   display: flex;
@@ -188,27 +189,22 @@
 .list-button:hover {
   background-color: rgba(26, 26, 26, 0.5); }
 
-.movies {
-  height: 1000px; }
-
 .movie-group {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column nowrap; }
+  flex-direction: row; }
+
+.movie-listname {
+  position: absolute; }
 
 .movie-posters {
   display: flex;
-  flex-flow: row nowrap;
   align-items: center;
-  justify-content: center;
-  align-content: center;
   height: 384px; }
 
-.single-movie {
+.movie-single {
   margin: 0 4px;
   transition: width 1s; }
-  .single-movie img {
+  .movie-single img {
     width: 100%;
     height: auto; }
 

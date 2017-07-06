@@ -13,7 +13,7 @@ class SingleMovie extends Component {
     const imgSrc = `https://image.tmdb.org/t/p/w342${poster_path}`;
     return (
       <div
-        className="single-movie"
+        className="movie-single"
         onMouseOver={() => {
           this.setState({ showPreview: true });
         }}

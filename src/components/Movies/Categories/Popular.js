@@ -9,11 +9,7 @@ class Popular extends Component {
   }
 
   render() {
-    return (
-      <div>
-        <MovieGroup movies={this.props.movies} title="Popular" />
-      </div>
-    );
+    return <MovieGroup movies={this.props.movies} title="Popular" />;
   }
 }
 

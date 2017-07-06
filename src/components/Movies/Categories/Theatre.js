@@ -9,11 +9,7 @@ class Theatre extends Component {
   }
 
   render() {
-    return (
-      <div>
-        <MovieGroup movies={this.props.movies} title="In Theatres" />
-      </div>
-    );
+    return <MovieGroup movies={this.props.movies} title="In Theatres" />;
   }
 }
 
