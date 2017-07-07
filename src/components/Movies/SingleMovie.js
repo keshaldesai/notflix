@@ -9,18 +9,19 @@ class SingleMovie extends Component {
   }
 
   render() {
-    const { backdrop_path, poster_path } = this.props.movie;
+    const { poster_path } = this.props.movie;
+    const { showPreview } = this.state;
     const imgSrc = `https://image.tmdb.org/t/p/w342${poster_path}`;
+    const previewClass = showPreview ? " movie-preview" : "";
     return (
       <div
-        className="movie-single"
+        className={"movie-single" + previewClass}
         onMouseOver={() => {
           this.setState({ showPreview: true });
         }}
         onMouseLeave={() => {
           this.setState({ showPreview: false });
         }}
-        style={{ width: this.state.showPreview ? "256px" : "171px", zIndex: 1 }}
       >
         <img src={imgSrc} alt="movie poster" />
       </div>

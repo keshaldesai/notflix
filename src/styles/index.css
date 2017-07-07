@@ -190,23 +190,30 @@
   background-color: rgba(26, 26, 26, 0.5); }
 
 .movie-group {
-  display: flex;
-  flex-direction: row; }
+  display: flex; }
 
 .movie-listname {
-  position: absolute; }
+  position: absolute;
+  font-weight: bolder;
+  font-size: 16px; }
 
 .movie-posters {
   display: flex;
   align-items: center;
-  height: 384px; }
+  height: 320px; }
 
 .movie-single {
-  margin: 0 4px;
-  transition: width 1s; }
+  transition: width 1s;
+  width: 170px;
+  margin: 0px 4px;
+  cursor: pointer; }
   .movie-single img {
     width: 100%;
     height: auto; }
+
+.movie-preview {
+  width: 230px;
+  z-index: 1; }
 
 body {
   background-color: #141414;
