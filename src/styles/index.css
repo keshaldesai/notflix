@@ -153,7 +153,7 @@
   background-position: center center; }
 
 .splash-overlay {
-  padding: 96px 0px 96px 32px;
+  padding: 96px 0px 96px 48px;
   background: linear-gradient(black, transparent, transparent, transparent, black);
   display: grid;
   grid-template-columns: 35% auto; }
@@ -190,30 +190,31 @@
   background-color: rgba(26, 26, 26, 0.5); }
 
 .movie-group {
-  display: flex; }
+  display: flex;
+  margin-left: 48px; }
 
 .movie-listname {
   position: absolute;
   font-weight: bolder;
-  font-size: 16px; }
+  font-size: 22px; }
 
 .movie-posters {
   display: flex;
   align-items: center;
-  height: 320px; }
+  height: 340px; }
 
 .movie-single {
   transition: width 1s;
   width: 170px;
-  margin: 0px 4px;
-  cursor: pointer; }
+  margin-right: 8px;
+  cursor: pointer;
+  z-index: 1; }
   .movie-single img {
     width: 100%;
     height: auto; }
 
 .movie-preview {
-  width: 230px;
-  z-index: 1; }
+  width: 230px; }
 
 body {
   background-color: #141414;

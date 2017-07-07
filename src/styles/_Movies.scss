@@ -1,23 +1,25 @@
 .movie-group {
   display: flex;
+  margin-left: 48px;
 }
 .movie-listname {
   position: absolute;
   font-weight: bolder;
-  font-size: 16px;
+  font-size: 22px;
 }
 
 .movie-posters {
   display: flex;
   align-items: center;
-  height: 320px;
+  height: 340px;
 }
 
 .movie-single {
   transition: width 1s;
   width: 170px;
-  margin: 0px 4px;
+  margin-right: 8px;
   cursor: pointer;
+  z-index: 1;
   img {
     width: 100%;
     height: auto;
@@ -26,5 +28,4 @@
 
 .movie-preview {
   width: 230px;
-  z-index: 1
 }
