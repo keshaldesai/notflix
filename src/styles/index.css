@@ -205,11 +205,11 @@
 .movie-posters {
   display: flex;
   align-items: center;
-  height: 340px; }
+  height: 400px; }
 
 .movie-single {
   transition: width .5s;
-  width: 170px;
+  width: 200px;
   margin-right: 8px;
   cursor: pointer;
   z-index: 1;
@@ -226,15 +226,22 @@
   width: 100%;
   height: 100%;
   display: none;
-  color: #FFF; }
+  color: #FFF;
+  opacity: 0; }
 
 .movie-single:hover {
-  width: 230px;
+  width: 260px;
   position: relative; }
   .movie-single:hover .movie-overlay {
-    display: block;
+    display: flex;
+    align-items: flex-end;
     background: rgba(0, 0, 0, 0.15);
-    z-index: 1000; }
+    z-index: 1000;
+    opacity: 1; }
+
+.overlay-grid {
+  display: grid;
+  grid-template-columns: 1fr 50px; }
 
 body {
   background-color: #141414;
