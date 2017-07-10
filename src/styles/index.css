@@ -208,17 +208,33 @@
   height: 340px; }
 
 .movie-single {
-  transition: width 1s;
+  transition: width .5s;
   width: 170px;
   margin-right: 8px;
   cursor: pointer;
-  z-index: 1; }
+  z-index: 1;
+  position: relative;
+  display: inline-block; }
   .movie-single img {
     width: 100%;
     height: auto; }
 
-.movie-preview {
-  width: 230px; }
+.movie-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  color: #FFF; }
+
+.movie-single:hover {
+  width: 230px;
+  position: relative; }
+  .movie-single:hover .movie-overlay {
+    display: block;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 1000; }
 
 body {
   background-color: #141414;
