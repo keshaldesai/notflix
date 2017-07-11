@@ -59,6 +59,36 @@
 
 .overlay-grid {
 	display: grid;
-  grid-template-columns: 1fr 50px;
+  grid-template-columns: 1fr 8px 50px;
   padding: 8px;
+}
+
+
+
+.overlay-info {
+
+}
+
+.overlay-prefs {
+  display: flex;
+  flex-flow: column nowrap;
+ justify-content: flex-end;
+ align-items: flex-end;
+ .fa {
+   opacity: .5;
+  color: white;
+  margin: 4px;
+  padding: 5px 4px;
+  border: 1px solid white;
+  border-radius: 50%;
+ }
+}
+
+.fa-play {
+  opacity: .5;
+  color: white;
+  margin: 4px;
+  padding: 4px 7px 4px 10px;
+  border: 1px solid white;
+  border-radius: 50%;
 }
