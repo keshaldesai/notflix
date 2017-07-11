@@ -3,7 +3,8 @@ import React, { Component } from "react";
 class SingleMovie extends Component {
 
   render() {
-    const { poster_path } = this.props.movie;
+    const { poster_path, title, overview, vote_average, release_date } = this.props.movie;
+    const year = release_date.split('-')[0];
     const imgSrc = `https://image.tmdb.org/t/p/w342${poster_path}`;
     return (
       <div className="movie-single" >
@@ -12,9 +13,9 @@ class SingleMovie extends Component {
           <div className="overlay-grid">
             <div className="overlay-info">
               <div>
-                <div>Moana</div>
-                <div>98% Match 2016 PG 1h 47m</div>
-                <div>A Polynesian girl destined to be her island's chief makes a perilous trip with a boastful demigod to undo his mistake and save her people.</div>
+                <div>{title}</div>
+                <div>{`${vote_average} ${year}`}</div>
+                <div>{overview}</div>
               </div>
             </div>
             <div className="overlay-prefs">
