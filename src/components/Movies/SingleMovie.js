@@ -12,7 +12,7 @@ class SingleMovie extends Component {
         <img src={imgSrc} alt="movie poster" />
         <div className="movie-overlay">
           <div className="overlay-play">
-            <i className="fa fa-play fa-2x" aria-hidden="true"></i>
+            <i className="fa fa-play-circle-o fa-4x" aria-hidden="true"></i>
           </div>
           <div className="overlay-grid">
             <div className="overlay-info">

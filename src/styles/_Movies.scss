@@ -34,20 +34,20 @@
   left: 0;
   width: 100%;
   height: 100%;
-  display: none;
   color: #FFF;
 	opacity: 0;
+  transition: opacity 1s;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  background: rgba(0, 0, 0, .15);
 }
 
 //add :hover when done fixing overlay
-.movie-single {
+.movie-single:hover {
   width: 260px;
   position: relative;
 	.movie-overlay {
-		display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-end;
-		background: rgba(0, 0, 0, .15);
 		z-index: 1000;
 		opacity: 1;
 	}
@@ -79,16 +79,25 @@
   color: white;
   margin: 4px;
   padding: 5px 4px;
-  border: 1px solid white;
+  border: 2px solid white;
   border-radius: 50%;
+  transition: all .3s;
+ }
+ .fa:hover {
+   opacity: 1;
+   font-size: 1.37em;
+   padding: 6px 5px;
  }
 }
 
-.fa-play {
+.fa-play-circle-o {
   opacity: .5;
   color: white;
-  margin: 4px;
-  padding: 4px 7px 4px 10px;
-  border: 1px solid white;
-  border-radius: 50%;
+  transition: all .3s;
+}
+
+.fa-play-circle-o:hover {
+  opacity: .7;
+  font-size: 4.2em;
+  color: red;
 }
