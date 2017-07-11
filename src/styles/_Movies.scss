@@ -39,19 +39,26 @@
 	opacity: 0;
 }
 
-.movie-single:hover {
+//add :hover when done fixing overlay
+.movie-single {
   width: 260px;
   position: relative;
 	.movie-overlay {
 		display: flex;
-		align-items: flex-end;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
 		background: rgba(0, 0, 0, .15);
 		z-index: 1000;
 		opacity: 1;
 	}
 }
 
+.overlay-play {
+  align-self: center;
+}
+
 .overlay-grid {
 	display: grid;
   grid-template-columns: 1fr 50px;
+  padding: 8px;
 }

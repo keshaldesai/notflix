@@ -229,19 +229,24 @@
   color: #FFF;
   opacity: 0; }
 
-.movie-single:hover {
+.movie-single {
   width: 260px;
   position: relative; }
-  .movie-single:hover .movie-overlay {
+  .movie-single .movie-overlay {
     display: flex;
-    align-items: flex-end;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
     background: rgba(0, 0, 0, 0.15);
     z-index: 1000;
     opacity: 1; }
 
+.overlay-play {
+  align-self: center; }
+
 .overlay-grid {
   display: grid;
-  grid-template-columns: 1fr 50px; }
+  grid-template-columns: 1fr 50px;
+  padding: 8px; }
 
 body {
   background-color: #141414;
