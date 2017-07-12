@@ -2,7 +2,7 @@ import { GET_POPULAR, GET_THEATRE } from "./types";
 import axios from "axios";
 
 const API_KEY = "f7a6b4be5b81c46de9945d56e3165355";
-const API = `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}`;
+const API = `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&include_adult=false`;
 
 export function getPopular() {
   const request = axios.get(`${API}&sort_by=popularity.desc`);
