@@ -194,8 +194,7 @@
   background-color: rgba(26, 26, 26, 0.5); }
 
 .movie-group {
-  display: flex;
-  margin-left: 48px; }
+  display: flex; }
 
 .movie-listname {
   position: absolute;
@@ -205,11 +204,13 @@
 .movie-posters {
   display: flex;
   align-items: center;
-  height: 400px; }
+  height: 420px;
+  transition: transform .5s;
+  overflow: visible; }
 
 .movie-single {
   transition: width .5s;
-  width: 200px;
+  width: 220px;
   margin-right: 8px;
   cursor: pointer;
   z-index: 1;
@@ -227,16 +228,16 @@
   height: 100%;
   color: #FFF;
   opacity: 0;
-  transition: opacity 1s;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-end;
   background: rgba(0, 0, 0, 0.15); }
 
 .movie-single:hover {
-  width: 260px;
+  width: 280px;
   position: relative; }
   .movie-single:hover .movie-overlay {
+    transition: opacity 1s;
     z-index: 1000;
     opacity: 1; }
 
@@ -245,7 +246,7 @@
 
 .overlay-grid {
   display: grid;
-  grid-template-columns: 1fr 8px 50px;
+  grid-template-columns: 1fr 50px;
   padding: 8px; }
 
 .overlay-prefs {
@@ -263,7 +264,7 @@
     transition: all .3s; }
   .overlay-prefs .fa:hover {
     opacity: 1;
-    font-size: 1.37em;
+    font-size: 1.35em;
     padding: 6px 5px; }
 
 .fa-play-circle-o {
@@ -275,6 +276,21 @@
   opacity: .7;
   font-size: 4.2em;
   color: red; }
+
+.group-pagination {
+  align-self: flex-end; }
+
+.fa-chevron-left {
+  margin-left: 1px;
+  z-index: 10000;
+  position: fixed;
+  left: 0; }
+
+.fa-chevron-right {
+  margin-right: 1px;
+  z-index: 10000;
+  position: absolute;
+  right: 0; }
 
 body {
   background-color: #141414;

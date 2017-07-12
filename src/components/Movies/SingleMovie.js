@@ -20,7 +20,6 @@ class SingleMovie extends Component {
               <div>{`${vote_average} ${year}`}</div>
               <div>{snippet}</div>
             </div>
-            <div />
             <div className="overlay-prefs">
               <i className="fa fa-thumbs-o-up fa-lg" aria-hidden="true"></i>
               <i className="fa fa-thumbs-o-down fa-lg" aria-hidden="true"></i>
