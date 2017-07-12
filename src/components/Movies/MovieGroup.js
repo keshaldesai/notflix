@@ -10,7 +10,6 @@ class MovieGroup extends Component {
   }
 
   handleRightClick(numPages) {
-    console.log(numPages);
     const { page } = this.state;
     if (page === Math.ceil(numPages) - 1) {
       return;
@@ -24,6 +23,46 @@ class MovieGroup extends Component {
       return;
     }
     this.setState({ page: page - 1 });
+  }
+
+  renderArrows(numPages) {
+    const { page } = this.state;
+    const left = (
+      <i
+        className="fa fa-chevron-left"
+        aria-hidden="true"
+        onClick={this.handleLeftClick.bind(this)}
+      />
+    );
+    const right = (
+      <i
+        className="fa fa-chevron-right"
+        aria-hidden="true"
+        onClick={this.handleRightClick.bind(this, numPages)}
+      />
+    );
+    if (page === 0) {
+      return (
+        <div>
+          >
+          {right}
+        </div>
+      );
+    }
+    if (page === Math.ceil(numPages) - 1) {
+      return (
+        <div>
+          >
+          {left}
+        </div>
+      );
+    }
+    return (
+      <div>
+        {left}
+        {right}
+      </div>
+    );
   }
 
   render() {
@@ -40,19 +79,10 @@ class MovieGroup extends Component {
     const numPages = rowLength / pageWidth;
     return (
       <div className="movie-group">
+        {this.renderArrows(numPages)}
         <div className="movie-listname">
           {title}
         </div>
-        <i
-          className="fa fa-chevron-left"
-          aria-hidden="true"
-          onClick={this.handleLeftClick.bind(this)}
-        />
-        <i
-          className="fa fa-chevron-right"
-          aria-hidden="true"
-          onClick={this.handleRightClick.bind(this, numPages)}
-        />
         <div
           className="movie-posters"
           style={{ transform: `translateX(${pageWidth * page * -1}px)` }}
