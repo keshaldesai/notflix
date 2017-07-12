@@ -44,7 +44,6 @@ class MovieGroup extends Component {
     if (page === 0) {
       return (
         <div>
-          >
           {right}
         </div>
       );
@@ -52,7 +51,6 @@ class MovieGroup extends Component {
     if (page === Math.ceil(numPages) - 1) {
       return (
         <div>
-          >
           {left}
         </div>
       );
