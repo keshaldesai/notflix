@@ -29,38 +29,40 @@ class MovieGroup extends Component {
     const { page } = this.state;
     const left = (
       <i
-        className="fa fa-chevron-left"
+        className="fa fa-chevron-left fa-2x"
         aria-hidden="true"
         onClick={this.handleLeftClick.bind(this)}
       />
     );
     const right = (
       <i
-        className="fa fa-chevron-right"
+        className="fa fa-chevron-right fa-2x"
         aria-hidden="true"
         onClick={this.handleRightClick.bind(this, numPages)}
       />
     );
-    if (page === 0) {
-      return (
-        <div>
-          {right}
-        </div>
-      );
+    const upperBound = Math.ceil(numPages) - 1;
+    switch (page) {
+      case 0:
+        return (
+          <div className="arrows">
+            {right}
+          </div>
+        );
+      case upperBound:
+        return (
+          <div className="arrows">
+            {left}
+          </div>
+        );
+      default:
+        return (
+          <div className="arrows">
+            {left}
+            {right}
+          </div>
+        );
     }
-    if (page === Math.ceil(numPages) - 1) {
-      return (
-        <div>
-          {left}
-        </div>
-      );
-    }
-    return (
-      <div>
-        {left}
-        {right}
-      </div>
-    );
   }
 
   render() {
