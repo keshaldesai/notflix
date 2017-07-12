@@ -204,9 +204,9 @@
 .movie-posters {
   display: flex;
   align-items: center;
-  height: 420px;
+  height: 450px;
   transition: transform .5s;
-  overflow: visible; }
+  position: relative; }
 
 .movie-single {
   transition: width .5s;
@@ -277,20 +277,16 @@
   font-size: 4.2em;
   color: red; }
 
-.group-pagination {
-  align-self: flex-end; }
-
-.fa-chevron-left {
-  margin-left: 1px;
+.left-arrow,
+.right-arrow {
   z-index: 10000;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 20px;
   position: absolute;
-  left: 0; }
+  transform: none; }
 
-.fa-chevron-right {
-  margin-right: 1px;
-  z-index: 10000;
-  position: absolute;
-  right: 0; }
+.right-arrow {
+  left: 93vw; }
 
 body {
   background-color: #141414;

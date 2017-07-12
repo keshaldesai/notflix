@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import SingleMovie from "./SingleMovie";
+import Arrow from "./Arrow";
 
 class MovieGroup extends Component {
   constructor(props) {
     super(props);
+    this.handleRightClick = this.handleRightClick.bind(this);
+    this.handleLeftClick = this.handleLeftClick.bind(this);
     this.state = {
       page: 0
     };
@@ -27,39 +30,17 @@ class MovieGroup extends Component {
 
   renderArrows(numPages) {
     const { page } = this.state;
-    const left = (
-      <i
-        className="fa fa-chevron-left fa-2x"
-        aria-hidden="true"
-        onClick={this.handleLeftClick.bind(this)}
-      />
-    );
-    const right = (
-      <i
-        className="fa fa-chevron-right fa-2x"
-        aria-hidden="true"
-        onClick={this.handleRightClick.bind(this, numPages)}
-      />
-    );
     const upperBound = Math.ceil(numPages) - 1;
     switch (page) {
       case 0:
-        return (
-          <div className="arrows">
-            {right}
-          </div>
-        );
+        return <Arrow direction="right" handleClick={this.handleRightClick} />;
       case upperBound:
-        return (
-          <div className="arrows">
-            {left}
-          </div>
-        );
+        return <Arrow direction="left" handleClick={this.handleLeftClick} />;
       default:
         return (
-          <div className="arrows">
-            {left}
-            {right}
+          <div>
+            <Arrow direction="left" handleClick={this.handleLeftClick} />
+            <Arrow direction="right" handleClick={this.handleRightClick} />
           </div>
         );
     }
@@ -72,14 +53,13 @@ class MovieGroup extends Component {
     if (numMovies === 0) {
       return <div />;
     }
-    const width = window.innerWidth;
-    const moviesPerWidth = width / 228;
+    const windowWidth = window.innerWidth;
+    const moviesPerWidth = windowWidth / 228;
     const pageWidth = Math.floor(moviesPerWidth) * 228;
     const rowLength = numMovies * 228;
     const numPages = rowLength / pageWidth;
     return (
       <div className="movie-group">
-        {this.renderArrows(numPages)}
         <div className="movie-listname">
           {title}
         </div>
@@ -87,6 +67,7 @@ class MovieGroup extends Component {
           className="movie-posters"
           style={{ transform: `translateX(${pageWidth * page * -1}px)` }}
         >
+          {this.renderArrows(numPages)}
           {movies.map(movie => {
             return <SingleMovie movie={movie} key={movie.id} />;
           })}

@@ -10,9 +10,9 @@
 .movie-posters {
   display: flex;
   align-items: center;
-  height: 420px;
+  height: 450px;
   transition: transform .5s;
-  overflow: visible;
+  position: relative;
 }
 
 .movie-single {
@@ -97,20 +97,18 @@
   color: red;
 }
 
-.group-pagination {
-  align-self: flex-end;
+.left-arrow,
+.right-arrow {
+  z-index: 10000;
+  background: rgba(0, 0, 0, .35);
+  padding: 20px;
+  position: absolute;
+  transform: none;
 }
 
-.fa-chevron-left {
-  margin-left: 1px;
-  z-index: 10000;
-  position: absolute;
-  left: 0;
+.left-arrow {
 }
 
-.fa-chevron-right {
-  margin-right: 1px;
-  z-index: 10000;
-  position: absolute;
-  right: 0;
+.right-arrow {
+  left: 93vw;
 }
