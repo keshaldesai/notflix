@@ -63,11 +63,11 @@ class MovieGroup extends Component {
         <div className="movie-listname">
           {title}
         </div>
+        {this.renderArrows(numPages)}
         <div
           className="movie-posters"
           style={{ transform: `translateX(${pageWidth * page * -1}px)` }}
         >
-          {this.renderArrows(numPages)}
           {movies.map(movie => {
             return <SingleMovie movie={movie} key={movie.id} />;
           })}
