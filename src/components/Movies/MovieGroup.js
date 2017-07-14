@@ -46,8 +46,8 @@ class MovieGroup extends Component {
           {title}
         </div>
         <div className="movie-container">
-          <Arrow direction="left" handleClick={this.handleLeftClick} />
-          <Arrow direction="right" handleClick={this.handleRightClick} />
+          <Arrow direction="left" handleClick={this.handleLeftClick} show={page > 0} />
+          <Arrow direction="right" handleClick={this.handleRightClick} show={page < Math.ceil(numPages) - 1} />
           <span
             className="movie-posters"
             style={{ transform: `translateX(${pageWidth * page * -1}px)` }}

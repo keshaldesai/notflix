@@ -75,7 +75,6 @@
   align-items: flex-end;
   .fa {
     opacity: .5;
-    color: white;
     margin: 4px;
     padding: 5px 4px;
     border: 2px solid white;
@@ -84,20 +83,16 @@
   }
   .fa:hover {
     opacity: 1;
-    font-size: 1.35em;
-    padding: 6px 5px;
   }
 }
 
 .fa-play-circle-o {
   opacity: .5;
-  color: white;
   transition: all .3s;
 }
 
 .fa-play-circle-o:hover {
   opacity: .7;
-  font-size: 4.2em;
   color: red;
 }
 
@@ -107,7 +102,7 @@
   background: rgba(0, 0, 0, .35);
   padding: 20px;
   position: absolute;
-  transform: none;
+  cursor: pointer;
 }
 
 .left-arrow {
