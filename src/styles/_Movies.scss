@@ -1,5 +1,6 @@
 .movie-group {
   display: flex;
+  margin-left: 40px;
 }
 .movie-listname {
   position: absolute;
@@ -7,12 +8,11 @@
   font-size: 22px;
 }
 
-.movie-container  {
+.movie-container {
   display: flex;
   align-items: center;
   height: 440px;
 }
-
 
 .movie-posters {
   display: flex;
@@ -23,7 +23,7 @@
 }
 
 .movie-single {
-  transition: width .5s;
+  transition: width .3s;
   width: 230px;
   margin-right: 8px;
   cursor: pointer;
@@ -51,9 +51,10 @@
 //add :hover when done fixing overlay
 .movie-single:hover {
   width: 280px;
+  z-index: 1001;
   .movie-overlay {
     transition: opacity 1s;
-    z-index: 1000;
+    z-index: 100;
     opacity: 1;
   }
 }
@@ -98,14 +99,16 @@
 
 .left-arrow,
 .right-arrow {
-  z-index: 10000;
-  background: rgba(0, 0, 0, .35);
-  padding: 20px;
+  z-index: 1000;
+  background: rgba(0, 0, 0, .3);
+  padding: 160px 0px;
   position: absolute;
   cursor: pointer;
 }
 
 .left-arrow {
+  padding-left: 9.3px;
+  padding-right: 9.3px;
   left: 0px;
 }
 

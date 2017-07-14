@@ -35,10 +35,12 @@ class MovieGroup extends Component {
     if (numMovies === 0) {
       return <div />;
     }
-    const windowWidth = window.innerWidth;
-    const moviesPerWidth = windowWidth / 228;
-    const pageWidth = Math.floor(moviesPerWidth) * 228;
-    const rowLength = numMovies * 228;
+    const windowWidth = window.innerWidth; //width of window
+    const moviesPerWidth = (windowWidth - 40) / 238; //this many movies on first page
+    const remainder = moviesPerWidth - Math.floor(moviesPerWidth);
+    const padding = remainder.toFixed(2) * 238 / 2 - 10.7 - 8;
+    const pageWidth = Math.floor(moviesPerWidth) * 238; //
+    const rowLength = numMovies * 238;
     const numPages = rowLength / pageWidth;
     return (
       <div className="movie-group">
@@ -46,8 +48,17 @@ class MovieGroup extends Component {
           {title}
         </div>
         <div className="movie-container">
-          <Arrow direction="left" handleClick={this.handleLeftClick} show={page > 0} />
-          <Arrow direction="right" handleClick={this.handleRightClick} show={page < Math.ceil(numPages) - 1} />
+          <Arrow
+            direction="left"
+            handleClick={this.handleLeftClick}
+            show={page > 0}
+          />
+          <Arrow
+            direction="right"
+            handleClick={this.handleRightClick}
+            show={page < Math.ceil(numPages) - 1}
+            padding={padding}
+          />
           <span
             className="movie-posters"
             style={{ transform: `translateX(${pageWidth * page * -1}px)` }}
