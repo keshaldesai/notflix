@@ -28,24 +28,6 @@ class MovieGroup extends Component {
     this.setState({ page: page - 1 });
   }
 
-  renderArrows(numPages) {
-    const { page } = this.state;
-    const upperBound = Math.ceil(numPages) - 1;
-    switch (page) {
-      case 0:
-        return <Arrow direction="right" handleClick={this.handleRightClick} />;
-      case upperBound:
-        return <Arrow direction="left" handleClick={this.handleLeftClick} />;
-      default:
-        return (
-          <div>
-            <Arrow direction="left" handleClick={this.handleLeftClick} />
-            <Arrow direction="right" handleClick={this.handleRightClick} />
-          </div>
-        );
-    }
-  }
-
   render() {
     const { movies, title } = this.props;
     const { page } = this.state;
@@ -63,14 +45,17 @@ class MovieGroup extends Component {
         <div className="movie-listname">
           {title}
         </div>
-        {this.renderArrows(numPages)}
-        <div
-          className="movie-posters"
-          style={{ transform: `translateX(${pageWidth * page * -1}px)` }}
-        >
-          {movies.map(movie => {
-            return <SingleMovie movie={movie} key={movie.id} />;
-          })}
+        <div className="movie-container">
+          <Arrow direction="left" handleClick={this.handleLeftClick} />
+          <Arrow direction="right" handleClick={this.handleRightClick} />
+          <span
+            className="movie-posters"
+            style={{ transform: `translateX(${pageWidth * page * -1}px)` }}
+          >
+            {movies.map(movie => {
+              return <SingleMovie movie={movie} key={movie.id} />;
+            })}
+          </span>
         </div>
       </div>
     );

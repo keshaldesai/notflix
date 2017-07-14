@@ -7,10 +7,17 @@
   font-size: 22px;
 }
 
-.movie-posters {
+.movie-container  {
   display: flex;
   align-items: center;
   height: 440px;
+}
+
+
+.movie-posters {
+  display: flex;
+  align-items: center;
+  height: 100%;
   transition: transform .5s;
   position: relative;
 }
