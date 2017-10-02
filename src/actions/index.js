@@ -1,4 +1,4 @@
-import { GET_POPULAR, GET_THEATRE } from "./types";
+import { GET_POPULAR, GET_THEATRE, GET_KIDS } from "./types";
 import axios from "axios";
 import { API_KEY } from "../config/config.json";
 
@@ -18,6 +18,16 @@ export function getTheatre() {
   );
   return {
     type: GET_THEATRE,
+    payload: request
+  };
+}
+
+export function getKids() {
+  const request = axios.get(
+    `${API}&certification_country=US&certification.lte=G&sort_by=popularity.desc`
+  );
+  return {
+    type: GET_KIDS,
     payload: request
   };
 }

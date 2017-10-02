@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Popular from "./Categories/Popular";
 import Theatre from "./Categories/Theatre";
+import Kids from "./Categories/Kids";
 
 class Movies extends Component {
   render() {
@@ -8,6 +9,7 @@ class Movies extends Component {
       <div className="movies">
         <Popular />
         <Theatre />
+        <Kids />
       </div>
     );
   }
