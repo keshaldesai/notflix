@@ -1,7 +1,7 @@
 import { GET_POPULAR, GET_THEATRE } from "./types";
 import axios from "axios";
+import { API_KEY } from "../config/config.json";
 
-const API_KEY = "f7a6b4be5b81c46de9945d56e3165355";
 const API = `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&include_adult=false&vote_average.gte=4`;
 
 export function getPopular() {
