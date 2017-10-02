@@ -37,16 +37,12 @@ class MovieGroup extends Component {
     }
     const windowWidth = window.innerWidth; //width of window
     const moviesPerWidth = (windowWidth - 40) / 238; //this many movies on first page
-    const remainder = moviesPerWidth - Math.floor(moviesPerWidth);
-    const padding = remainder.toFixed(2) * 238 / 2 - 10.7 - 8;
     const pageWidth = Math.floor(moviesPerWidth) * 238; //
     const rowLength = numMovies * 238;
     const numPages = rowLength / pageWidth;
     return (
       <div className="movie-group">
-        <div className="movie-listname">
-          {title}
-        </div>
+        <div className="movie-listname">{title}</div>
         <div className="movie-container">
           <Arrow
             direction="left"
@@ -57,7 +53,6 @@ class MovieGroup extends Component {
             direction="right"
             handleClick={this.handleRightClick}
             show={page < Math.ceil(numPages) - 1}
-            padding={padding}
           />
           <span
             className="movie-posters"

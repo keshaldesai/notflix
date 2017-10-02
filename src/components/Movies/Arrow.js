@@ -1,13 +1,9 @@
 import React from "react";
 
-function Arrow({ direction, handleClick, show, padding }) {
+function Arrow({ direction, handleClick, show }) {
   const styleObj = {
     display: show ? "" : "none"
   };
-  if (padding) {
-    styleObj.paddingLeft = padding;
-    styleObj.paddingRight = padding;
-  }
   return (
     <div
       className={`${direction}-arrow`}
