@@ -3,7 +3,7 @@
 Reproduction of the Netflix UI
 
 ## Demo
-[https://keshaldesai.github.io/notflix/](https://keshaldesai.github.io/notflix/)
+[https://keshaldesai.github.io/notflix](https://keshaldesai.github.io/notflix)
 
 ## Built With
 
