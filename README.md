@@ -1,6 +1,6 @@
 # Notflix
 
-Recreation of the Netflix UI
+Reproduction of the Netflix UI
 
 ## Demo
 [https://keshaldesai.github.io/notflix/](https://keshaldesai.github.io/notflix/)
